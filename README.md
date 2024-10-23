@@ -1,14 +1,14 @@
 # ComfyUI-MultiGPU
 
-## Forked
-
-This fork adds `TripleCLIPLoaderMultiGPU` node for Stable Diffusion 3.5 Large support.
-
-### Experimental nodes for using multiple GPUs in a single ComfyUI workflow.
+## Experimental nodes for using multiple GPUs in a single ComfyUI workflow.
 
 This extension adds new nodes for model loading that allow you to specify the GPU to use for each model. It monkey patches the memory management of ComfyUI in a hacky way and is neither a comprehensive solution nor a well-tested one. Use at your own risk.
 
 Note that this does not add parallelism. The workflow steps are still executed sequentially just on different GPUs. Any potential speedup comes from not having to constantly load and unload models from VRAM.
+
+## About this fork
+
+This fork adds `TripleCLIPLoaderMultiGPU` node for Stable Diffusion 3.5 Large support.
 
 ## Installation
 
