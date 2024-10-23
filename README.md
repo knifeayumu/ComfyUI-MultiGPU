@@ -1,5 +1,9 @@
 # ComfyUI-MultiGPU
 
+## Forked
+
+This fork adds `TripleCLIPLoaderMultiGPU` node for Stable Diffusion 3.5 Large support.
+
 ### Experimental nodes for using multiple GPUs in a single ComfyUI workflow.
 
 This extension adds new nodes for model loading that allow you to specify the GPU to use for each model. It monkey patches the memory management of ComfyUI in a hacky way and is neither a comprehensive solution nor a well-tested one. Use at your own risk.
@@ -20,12 +24,19 @@ The extension adds new loader nodes corresponding to the default ones. The new n
 - `CLIPLoaderMultiGPU`
 - `ControlNetLoaderMultiGPU`
 - `DualCLIPLoaderMultiGPU`
+- `TripleCLIPLoaderMultiGPU`
 - `UNETLoaderMultiGPU`
 - `VAELoaderMultiGPU`
 
 ## Example workflows
 
 All workflows have been tested on a 2x 3090 setup.
+
+### Split Stable Diffusion 3.5 Large across two GPUs
+
+- [Download](examples/sd3.5_large_2gpu.json)
+
+This workflow loads the checkpoint on GPU 0 and CLIP files on GPU 1.
 
 ### Loading two SDXL checkpoints on different GPUs
 
